@@ -1,0 +1,74 @@
+//variables
+$vh: 1080;
+
+@function rem($size) {
+  $remSize: $size / $font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin fz($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@function lh($size1, $size2) {
+  $lh: $size2 / $size1;
+  @return $lh;
+}
+
+@function vh($size) {
+  @return $size/$vh *100*1vh;
+}
+
+@mixin content() {
+  ul {
+    margin: 1em 0;
+    padding-left: 40px;
+    li {
+      list-style: disc;
+    }
+  }
+
+  h1 {
+    margin: 0.67em 0;
+  }
+  h2 {
+    margin: 0.83em 0;
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  h4 {
+    margin: 1.33em 0;
+  }
+  h5 {
+    margin: 1.67em 0;
+  }
+  h5 {
+    margin: 2.33em 0;
+  }
+  p {
+    margin: 1em 0;
+  }
+}
+
+@mixin headers() {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.875rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,68 @@
+include common/_mixins
+include common/_settings
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+
+        title Portfolio | #{title}
+        link(rel='stylesheet' href='css/vendor.min.css')
+        link(rel='stylesheet' href='css/main.css')
+        // Для изменений после верстки
+        link(rel='stylesheet' href='css/custom.css')
+
+        link(rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png")
+        link(rel="manifest" href="images/favicon/site.webmanifest")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+    body
+        .wrapper
+            //- heeader
+            header.header
+                nav.nav
+                    each val in menu
+                        .nav__item= val
+
+            //- pages
+            .page
+                block content
+
+            //- footer
+            footer.footer
+
+        .debug
+            div
+                div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+                    div
+
+
+
+        script(src='js/vendor.min.js')
+        script(src='js/main.min.js')
+        // Для изменений после верстки
+        script(src='js/custom.js')

@@ -1,0 +1,28 @@
+//variables
+//fonts
+$font: 'Gilroy', Arial, sans-serif;
+
+//colors
+$text: #4D4D4D;
+$bg: #ffffff;
+
+//another
+$font-size: 16px;
+
+//layout
+@import "layout/mixins";
+@import "layout/fonts";
+@import "layout/smart-grid";
+@import "layout/adjustment";
+@import "layout/common";
+
+//sections
+@import "sections/header";
+@import "sections/footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}
